@@ -5,7 +5,100 @@
 [node name="FastLogger" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.7962
+margin_top = -1.7962
+margin_right = -1.7962
+margin_bottom = -1.7962
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="FPS" type="Label" parent="."]
+margin_left = 9.7962
+margin_top = 9.7962
+margin_right = 57.7962
+margin_bottom = 33.7962
+text = "FPS:"
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="FPS"]
+margin_left = 31.7331
+margin_top = -1.19748
+margin_right = 89.7331
+margin_bottom = 22.8025
+editable = false
+
+[node name="VisibleLogDur" type="Label" parent="."]
+margin_left = 9.7962
+margin_top = 49.7962
+margin_right = 94.7962
+margin_bottom = 73.7962
+text = "Visible Log:"
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="VisibleLogDur"]
+margin_left = 78.0
+margin_top = -1.0
+margin_right = 232.0
+margin_bottom = 23.0
+editable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HiddenLogDur" type="Label" parent="."]
+margin_left = 9.7962
+margin_top = 89.7962
+margin_right = 173.796
+margin_bottom = 113.796
+text = "Hidden Log:"
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="HiddenLogDur"]
+margin_left = 81.0
+margin_top = -1.0
+margin_right = 232.0
+margin_bottom = 23.0
+editable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FormattedLogDur" type="Label" parent="."]
+margin_left = 9.7962
+margin_top = 129.796
+margin_right = 173.796
+margin_bottom = 153.796
+text = "Formatted Log:"
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="FormattedLogDur"]
+margin_left = 102.555
+margin_top = -1.0
+margin_right = 253.555
+margin_bottom = 23.0
+editable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
