@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "LinkedList",
 "language": "GDScript",
 "path": "res://logging/LinkedList.gd"
+}, {
+"base": "Reference",
+"class": "Logger",
+"language": "GDScript",
+"path": "res://logging/Logger.gd"
 } ]
 _global_script_class_icons={
-"LinkedList": ""
+"LinkedList": "",
+"Logger": ""
 }
 
 [application]
@@ -25,7 +31,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Logger="*res://logging/Logger.gd"
+Logging="*res://logging/Logging.gd"
 
 [rendering]
 
