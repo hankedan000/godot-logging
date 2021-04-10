@@ -23,7 +23,6 @@ func _init(obj):
 	elif obj is String:
 		logger_name = obj
 
-					
 func trace(msg_fmt,sub_strs = []):
 	_log(Logging.LEVEL.TRACE,msg_fmt,sub_strs)
 	

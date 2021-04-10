@@ -4,6 +4,8 @@ var logger : Logger = null
 var my_int = 0
 
 func _ready():
+	Logging.init_basic_logging()
+	Logging.add_appender(XML_SocketAppender.new())
 	logger = Logging.get_logger(self)
 	logger.trace("This is a TRACE log")
 	logger.debug("This is a DEBUG log")

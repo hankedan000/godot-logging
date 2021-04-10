@@ -10,6 +10,16 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
+"class": "BaseAppender",
+"language": "GDScript",
+"path": "res://logging/appenders/BaseAppender.gd"
+}, {
+"base": "BaseAppender",
+"class": "ConsoleAppender",
+"language": "GDScript",
+"path": "res://logging/appenders/ConsoleAppender.gd"
+}, {
+"base": "Reference",
 "class": "LinkedList",
 "language": "GDScript",
 "path": "res://logging/LinkedList.gd"
@@ -18,10 +28,18 @@ _global_script_classes=[ {
 "class": "Logger",
 "language": "GDScript",
 "path": "res://logging/Logger.gd"
+}, {
+"base": "BaseAppender",
+"class": "XML_SocketAppender",
+"language": "GDScript",
+"path": "res://logging/appenders/XML_SocketAppender.gd"
 } ]
 _global_script_class_icons={
+"BaseAppender": "",
+"ConsoleAppender": "",
 "LinkedList": "",
-"Logger": ""
+"Logger": "",
+"XML_SocketAppender": ""
 }
 
 [application]
